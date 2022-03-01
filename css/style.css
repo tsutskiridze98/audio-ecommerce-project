@@ -1,0 +1,277 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif; }
+
+/* ----------- BUTTON ---------- */
+.btn:link, .btn:visited {
+  font-size: 1.3rem;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all .2s;
+  position: relative; }
+
+.btn-shop {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 10rem;
+  margin: 0 auto; }
+  .btn-shop::after {
+    content: url(/assets/shared/desktop/icon-arrow-right.svg);
+    position: absolute;
+    left: 15rem; }
+  .btn-shop:hover {
+    color: #D87D4A; }
+
+.btn-orange {
+  width: 16.5rem;
+  background-color: #D87D4A;
+  color: #fff;
+  padding: 1.5rem 3rem; }
+  .btn-orange:hover {
+    background-color: #FBAF85; }
+
+.btn-black {
+  width: 16.5rem;
+  background-color: #000;
+  color: #fff;
+  padding: 1.5rem 3rem; }
+  .btn-black:hover {
+    background-color: #4C4C4C; }
+
+.btn-transparent {
+  width: 16.5rem;
+  border: 1px solid #000;
+  color: #000;
+  padding: 1.5rem 3rem; }
+  .btn-transparent:hover {
+    background-color: #000;
+    color: #fff; }
+
+.footer {
+  background-color: #101010; }
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/home/desktop/image-hero.jpg);
+  background-size: cover;
+  background-position: top; }
+  .header-nav {
+    height: 9.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    .header-nav-logo {
+      text-transform: lowercase; }
+      .header-nav-logo a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 600; }
+    .header-nav-links {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between; }
+      .header-nav-links li {
+        list-style: none; }
+        .header-nav-links li a {
+          display: inline-block;
+          text-decoration: none;
+          color: #fff;
+          letter-spacing: .2rem;
+          padding: .9rem 1.7rem;
+          transition: all .2s; }
+          .header-nav-links li a:hover {
+            color: #D87D4A; }
+  .header-container {
+    margin-top: 12.8rem;
+    color: #fff;
+    width: 40rem;
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .header-container h4 {
+      opacity: .5;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      font-weight: 300; }
+    .header-container h1 {
+      font-size: 5.6rem;
+      text-transform: uppercase;
+      line-height: 5.8rem; }
+    .header-container p {
+      opacity: .75;
+      font-size: 1.5rem;
+      letter-spacing: 1.2px;
+      font-weight: 200;
+      line-height: 2.5rem;
+      text-transform: capitalize; }
+
+/* ------------- MAIN ------------- */
+main {
+  background-color: #fafafa;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  /* --------- SECTION 1 ------------ */
+  /* --------- SECTION 2 ------------ */
+  /* --------- SECTION 3 ------------ */
+  /* --------- SECTION 4 ------------ */ }
+  main .section {
+    border-radius: .5rem; }
+  main .section-1 {
+    display: flex;
+    justify-content: space-between; }
+    main .section-1 .sec1-item {
+      width: 35rem;
+      height: 20rem;
+      background-color: #F1F1F1;
+      border-radius: 5px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      main .section-1 .sec1-item-space {
+        height: 60%; }
+      main .section-1 .sec1-item-img {
+        width: 20rem;
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 10%); }
+        main .section-1 .sec1-item-img img {
+          width: 100%; }
+      main .section-1 .sec1-item h6 {
+        font-size: 1.8rem;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700; }
+  main .section-2 {
+    width: 100%;
+    height: 56rem;
+    background-color: #D87D4A;
+    margin-top: 16.8rem;
+    position: relative;
+    overflow: hidden; }
+    main .section-2 .circle {
+      border-radius: 50%;
+      border: 1px solid rgba(250, 250, 250, 0.2);
+      position: absolute;
+      top: 80%;
+      left: 33%;
+      transform: translate(-50%, -50%); }
+    main .section-2 #circle1 {
+      width: 47rem;
+      height: 47rem; }
+    main .section-2 #circle2 {
+      width: 54rem;
+      height: 54rem; }
+    main .section-2 #circle3 {
+      width: 94rem;
+      height: 94rem; }
+    main .section-2 .sec2-for-img {
+      width: 50%;
+      position: absolute;
+      bottom: -1.5rem;
+      left: 20rem; }
+      main .section-2 .sec2-for-img img {
+        width: 65%; }
+    main .section-2 .sec2-container {
+      position: absolute;
+      right: 9.5rem;
+      top: 13rem;
+      width: 35rem;
+      height: 30rem;
+      color: #fff;
+      display: flex;
+      flex-direction: column; }
+      main .section-2 .sec2-container h1 {
+        font-size: 5.6rem;
+        text-transform: uppercase;
+        line-height: 5.8rem; }
+      main .section-2 .sec2-container p {
+        opacity: .75;
+        font-size: 1.5rem;
+        letter-spacing: 1.2px;
+        font-weight: 200;
+        line-height: 2.5rem;
+        text-transform: capitalize; }
+  main .section-3 {
+    margin-top: 5rem;
+    width: 100%;
+    height: 32rem;
+    background-image: url(/assets/home/desktop/image-speaker-zx7.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative; }
+    main .section-3 .sec3-container {
+      width: 22rem;
+      height: 12rem;
+      position: absolute;
+      top: 50%;
+      left: 10rem;
+      transform: translate(0, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      main .section-3 .sec3-container h4 {
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        line-height: 3.8rem;
+        letter-spacing: .2rem; }
+  main .section-4 {
+    margin-top: 5rem;
+    width: 100%;
+    height: 32rem;
+    display: flex;
+    justify-content: space-between; }
+    main .section-4 .sec4-left, main .section-4 .sec4-right {
+      width: 54rem;
+      height: 100%;
+      border-radius: .5rem; }
+    main .section-4 .sec4-left {
+      background-image: url(/assets/home/desktop/image-earphones-yx1.jpg);
+      background-size: cover;
+      background-position: top; }
+    main .section-4 .sec4-right {
+      background-color: #F1F1F1;
+      position: relative; }
+      main .section-4 .sec4-right .sec4-container {
+        height: 12rem;
+        position: absolute;
+        top: 50%;
+        left: 10rem;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+      main .section-4 .sec4-right h4 {
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        line-height: 3.8rem;
+        letter-spacing: .2rem; }
+
+/* 165px დაშორება გვერდებიდან */
+.side-padding {
+  padding-left: 16.5rem;
+  padding-right: 16.5rem; }

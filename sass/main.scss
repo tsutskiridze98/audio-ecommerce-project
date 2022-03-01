@@ -1,0 +1,24 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/footer";
+@import "layout/header";
+
+@import "pages/home";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap');
+
+
+/* 165px დაშორება გვერდებიდან */
+.side-padding {
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+}

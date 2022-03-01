@@ -1,0 +1,65 @@
+/* ----------- BUTTON ---------- */
+
+.btn {
+    &:link, &:visited {
+        font-size: 1.3rem;
+        letter-spacing: 1.1px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        text-transform: uppercase;
+        border-radius: 2px;
+        transition: all .2s;
+        position: relative;
+    }
+    
+    &-shop {
+        color: rgba($color-black, 0.5);
+        padding: 2rem 10rem;
+        margin: 0 auto;
+
+        &::after {
+            content: url(/assets/shared/desktop/icon-arrow-right.svg);
+            position: absolute;
+            left: 15rem;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &-orange {
+        width: 16.5rem;
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 1.5rem 3rem;
+
+        &:hover {
+            background-color: $color-primary-light;
+        }
+    }
+
+    &-black {
+        width: 16.5rem;
+        background-color: $color-black;
+        color: $color-white;
+        padding: 1.5rem 3rem;
+
+        &:hover {
+            background-color: $color-secondary-dark3;
+        }
+    }
+
+    &-transparent {
+        width: 16.5rem;
+        border: 1px solid $color-black;
+        color: $color-black;
+        padding: 1.5rem 3rem;
+
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+}

@@ -1,0 +1,203 @@
+/* ------------- MAIN ------------- */
+main {
+    background-color: $color-secondary-light2;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+
+    .section {
+        border-radius: .5rem;
+    }
+
+    /* --------- SECTION 1 ------------ */
+    .section-1 {
+        display: flex;
+        justify-content: space-between;
+
+        .sec1-item {
+            width: 35rem;
+            height: 20rem;
+            background-color: $color-secondary-light3;
+            border-radius: 5px;
+            position: relative;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-space {
+                height: 60%;
+            }
+
+            &-img {
+                width: 20rem;
+                position: absolute;
+                left: 50%;
+                bottom: 50%;
+                transform: translate(-50%, 10%);
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            h6 {
+                font-size: 1.8rem;
+                letter-spacing: 1.3px;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 700;
+            }
+        }  
+    }
+
+    /* --------- SECTION 2 ------------ */
+    .section-2 {
+        width: 100%;
+        height: 56rem;
+        background-color: $color-primary;
+        margin-top: 16.8rem;
+        position: relative;
+        overflow: hidden;
+
+        .circle {
+            border-radius: 50%;
+            border: 1px solid rgba($color-secondary-light2, .2);
+            position: absolute;
+            top: 80%;
+            left: 33%;
+            transform: translate(-50%, -50%);
+        }
+
+        #circle1 {
+            width: 47rem;
+            height: 47rem;
+        }
+
+        #circle2 {
+            width: 54rem;
+            height: 54rem;
+        }
+
+        #circle3 {
+            width: 94rem;
+            height: 94rem;
+        }
+
+        .sec2-for-img {
+            width: 50%;
+            position: absolute;
+            bottom: -1.5rem;
+            left: 20rem;
+
+            img {
+                width: 65%;
+            }
+        }
+
+        .sec2-container {
+            position: absolute;
+            right: 9.5rem;
+            top: 13rem;
+            width: 35rem;
+            height: 30rem;
+            color: $color-white;
+    
+            display: flex;
+            flex-direction: column;  
+            
+            h1 {
+                font-size: 5.6rem;
+                text-transform: uppercase;
+                line-height: 5.8rem;
+            }
+
+            p {
+                opacity: .75;
+                font-size: 1.5rem;
+                letter-spacing: 1.2px;
+                font-weight: 200;
+                line-height: 2.5rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    /* --------- SECTION 3 ------------ */
+    .section-3 {
+        margin-top: 5rem;
+        width: 100%;
+        height: 32rem;
+        background-image: url(/assets/home/desktop/image-speaker-zx7.jpg);
+        background-size: cover;
+        background-position: top;
+
+        position: relative;
+
+        .sec3-container {
+            width: 22rem;
+            height: 12rem;
+            position: absolute;
+            top: 50%;
+            left: 10rem;
+            transform: translate(0, -50%);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h4 {
+                font-size: 2.8rem;
+                text-transform: uppercase;
+                line-height: 3.8rem;
+                letter-spacing: .2rem;
+            }
+        }
+    }
+
+    /* --------- SECTION 4 ------------ */
+    .section-4 {
+        margin-top: 5rem;
+        width: 100%;
+        height: 32rem;
+
+        display: flex;
+        justify-content: space-between;
+
+        .sec4-left, .sec4-right {
+            width: 54rem;
+            height: 100%;
+            border-radius: .5rem;
+        }
+
+        .sec4-left {
+            background-image: url(/assets/home/desktop/image-earphones-yx1.jpg);
+            background-size: cover;
+            background-position: top;
+        }
+
+        .sec4-right {
+            background-color: $color-secondary-light3;
+    
+            position: relative;
+
+            .sec4-container {
+                height: 12rem;
+                position: absolute;
+                top: 50%;
+                left: 10rem;
+                transform: translateY(-50%);
+        
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            h4 {
+                font-size: 2.8rem;
+                text-transform: uppercase;
+                line-height: 3.8rem;
+                letter-spacing: .2rem;
+            }
+        }
+    }
+}
