@@ -1,3 +1,100 @@
 .footer {
+    padding-bottom: 5rem;
+    width: 100%;
+    height: auto;
     background-color: $color-secondary-dark2;
+
+    &-rect {
+        width: 10rem;
+        height: .4rem;
+        background-color: $color-primary;
+    }
+
+    &-nav {
+        padding: 7rem 0 3.6rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-links {
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 700;
+            
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                list-style: none;
+
+                &:not(:last-child) {
+                    padding: 0 1.7rem;
+                }
+
+                &:last-child {
+                    padding-left: 1.7rem;
+                }
+
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: $color-white;
+                    letter-spacing: .2rem;
+                    transition: all .2s;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+
+        &-texts {
+            width: 54rem;
+    
+            @include flex-space-between;
+            row-gap: 5.6rem;
+    
+            &-paragraph {
+                color: rgba($color-white, .5);
+    
+                p {
+                    letter-spacing: normal;
+                    font-weight: 500;
+                }
+            }
+    
+            &-copyright {
+                color: rgba($color-white, .5);
+                
+                p {
+                    letter-spacing: normal;
+                    font-weight: 500;
+                }
+            }
+        }
+    
+        &-icons {
+            padding-top: 7rem;
+
+            a {
+                img:hover {
+                    filter: $color-primary-svg;
+                }
+            }
+            
+            a:not(:last-child) {
+                padding: .8rem;
+            }
+
+            a:last-child {
+                padding: .8rem 0 .8rem .8rem;
+            }
+        }
+    }
 }
