@@ -1,9 +1,17 @@
 .header {
     width: 100%;
-    height: 100vh;
+    height: 73rem;
     background-image: url(/assets/home/desktop/image-hero.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
+
+    @include respond(tablet) {
+        background-image: url(/assets/home/tablet/image-header.jpg);
+    }
+
+    @include respond(phone) {
+        background-image: url(/assets/home/mobile/image-header.jpg);
+    }
 
     &-nav {
         height: 9.6rem;
@@ -11,6 +19,46 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid rgba($color-white, 0.2);
+        position: relative;
+        z-index: 100;
+
+        /* ----Burger---- */
+        .burger {
+            width: 20px;
+            height: 16px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer; 
+            
+            .line-1, .line-2, .line-3 {
+                width: 100%;
+                height: 2px;
+                background-color: $color-white;
+                transition: all 0.3s;
+            }
+
+            @include respond(tablet) {
+                display: flex;
+            }
+            @include respond(phone) {
+                display: flex;
+            }
+        }
+
+        .toggle {
+            .line-1{
+                transform: rotate(45deg) translate(5px, 5px);
+            } 
+
+            .line-2{
+                opacity: 0;
+            }
+
+            .line-3{
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
 
         &-links {
             text-transform: uppercase;
@@ -36,23 +84,106 @@
                     }
                 }
             }
+
+            @include respond(tablet) {
+                display: none;
+            }
         }
     }
 
+    .burger-nav {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 34rem;
+        background-color: $color-white;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        animation: nav-down .4s ease-in-out;
+
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+        padding: 10rem 2rem 2rem 2rem;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 6.8rem;
+            height: auto;
+        }
+    
+        &-item {
+            width: 100%;
+            height: 20rem;
+            background-color: $color-secondary-light3;
+            border-radius: 5px;
+            position: relative;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-space {
+                height: 60%;
+            }
+
+            &-img {
+                width: 15rem;
+                position: absolute;
+                left: 50%;
+                bottom: 50%;
+                transform: translate(-50%, 10%);
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            h6 {
+                text-align: center;
+            }
+        }  
+    }
+
+    .display-nav {
+        top: 9.6rem;
+        display: grid;
+    }
+
     &-container {
-        margin-top: 12.8rem;
-        color: $color-white;
-        width: 40rem;
-        height: 36rem;
+        width: 100%;
+        height: 100%;
+        position: relative;
 
-        @include flex-space-between;
+        &-child {
+            position: absolute;
+            left: 0;
+            top: 40%;
+            transform: translateY(-50%);
+            color: $color-white;
+            width: 40rem;
+            height: 36rem;
 
-        .heading-overline {
-            opacity: .5;
-        }
+            @include flex-space-between;
 
-        p {
-            opacity: .75;
-        }
+            .heading-overline {
+                opacity: .5;
+            }
+
+            p {
+                opacity: .75;
+            }
+
+            @include respond(tablet) {
+                align-items: center;
+                left: 50%;
+                top: 40%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+        }        
     }
 }

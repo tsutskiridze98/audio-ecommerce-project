@@ -1,5 +1,23 @@
-/* 165px დაშორება გვერდებიდან */
+/* 1110px სიგანე */
+.width-center {
+    max-width: 111rem;
+    margin: 0 auto;
+}
+
 .side-padding {
-    padding-left: 16.5rem;
-    padding-right: 16.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.for-blur {
+    display: none;
+    background-color: rgba($color-black, .4);
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+}
+
+.display-block {
+    display: block;
 }

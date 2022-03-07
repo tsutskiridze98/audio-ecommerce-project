@@ -10,11 +10,18 @@ main {
 
     /* --------- SECTION 1 ------------ */
     .section-1 {
-        display: flex;
-        justify-content: space-between;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 6.8rem;
+        }
 
         .sec1-item {
-            width: 35rem;
+            width: 100%;
             height: 20rem;
             background-color: $color-secondary-light3;
             border-radius: 5px;
@@ -29,7 +36,7 @@ main {
             }
 
             &-img {
-                width: 20rem;
+                width: 15rem;
                 position: absolute;
                 left: 50%;
                 bottom: 50%;
