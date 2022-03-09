@@ -12,6 +12,9 @@
     @include respond(phone) {
         background-image: url(/assets/home/mobile/image-header.jpg);
     }
+    // img {
+    //     width: 100%;
+    // }
 
     &-nav {
         height: 9.6rem;

@@ -4,6 +4,11 @@ main {
     padding-top: 20rem;
     padding-bottom: 20rem;
 
+    @include respond(tablet) {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
     .section {
         border-radius: .5rem;
     }
@@ -62,6 +67,15 @@ main {
         position: relative;
         overflow: hidden;
 
+        display: flex;
+
+        padding-top: 1rem;
+
+        @include respond(tablet) {
+            flex-direction: column;
+            height: 70rem;
+        }
+
         .circle {
             border-radius: 50%;
             border: 1px solid rgba($color-secondary-light2, .2);
@@ -69,6 +83,12 @@ main {
             top: 80%;
             left: 33%;
             transform: translate(-50%, -50%);
+
+            @include respond(tablet) {
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         #circle1 {
@@ -88,24 +108,50 @@ main {
 
         .sec2-for-img {
             width: 50%;
-            position: absolute;
-            bottom: -1.5rem;
-            left: 20rem;
+            position: relative;
+
+            @include respond(tablet) {
+                height: 50%;
+                width: 100%;
+            }
 
             img {
-                width: 65%;
+                width: 41rem;
+                position: absolute;
+                bottom: -1.5rem;
+                left: 10rem;
+
+                @include respond(tablet) {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 20rem;
+                }
             }
         }
 
         .sec2-container {
-            position: absolute;
-            right: 9.5rem;
-            top: 13rem;
-            width: 35rem;
-            height: 30rem;
+            width: 36rem;
+            margin-left: 10rem;
+
             color: $color-white;
     
-            @include flex-space-between;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+
+            @include respond(tablet) {
+                text-align: center;
+                align-items: center;
+                height: 50%;
+                margin: 0 auto;
+                padding: 10rem 0;
+            }
+
+            & > *:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
 
             p {
                 opacity: .75;
@@ -117,12 +163,12 @@ main {
     .section-3 {
         margin-top: 5rem;
         width: 100%;
-        height: 32rem;
-        background-image: url(/assets/home/desktop/image-speaker-zx7.jpg);
-        background-size: cover;
-        background-position: top;
-
         position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
 
         .sec3-container {
             width: 22rem;
@@ -133,6 +179,12 @@ main {
             transform: translate(0, -50%);
 
             @include flex-space-between;
+
+            @include respond(phone) {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 
@@ -140,35 +192,48 @@ main {
     .section-4 {
         margin-top: 5rem;
         width: 100%;
-        height: 32rem;
+        height: auto;
 
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 2.4rem;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr minmax(20rem, auto);
+        }
 
         .sec4-left, .sec4-right {
-            width: 54rem;
-            height: 100%;
             border-radius: .5rem;
+            height: 99%;
+            
+            @include respond(phone) {
+                max-height: 500px;
+            }
         }
 
         .sec4-left {
-            background-image: url(/assets/home/desktop/image-earphones-yx1.jpg);
-            background-size: cover;
-            background-position: top;
+            overflow: hidden;
+           
+            img {
+                width: 100%;
+            }
         }
 
         .sec4-right {
+            width: 100%;
             background-color: $color-secondary-light3;
-    
             position: relative;
 
             .sec4-container {
                 height: 12rem;
                 position: absolute;
                 top: 50%;
-                left: 10rem;
-                transform: translateY(-50%);
-        
+                left: 30%;
+                transform: translate(-30%, -50%);
+
                 @include flex-space-between;
             }
         }
@@ -177,33 +242,58 @@ main {
     /* --------- SECTION 5 ------------ */
     .section-5 {
         width: 100%;
-        height: 58.8rem;
+        height: auto;
         margin-top: 20rem;
 
-        display: flex;
+        display: grid;
+        grid-template-areas: "a b";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 4rem;
+
+        @include respond(tablet) {
+            grid-template-areas:
+            "b"
+            "a";
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr minmax(20rem, auto);
+        }
 
         &-left, &-right {
-            width: 50%;
+            width: 100%;
             height: 100%;
             border-radius: 1rem;
+            overflow: hidden;
         }
 
         &-left {
-            position: relative;
+            grid-area: a;
+            display: flex;
+            align-items: center;
 
             &-container {
-                position: absolute;
                 height: 30rem;
                 width: 44.5rem;
-                text-align: left;
-                top: 50%;
-                transform: translateY(-50%);
 
                 @include flex-space-between;
+
+                @include respond(tablet){
+                    width: 80%;
+                    margin: 0 auto;
+                    height: auto;
+                    text-align: center;
+                }
+
+                @include respond(phone) {
+                    width: 100%;
+                }
 
                 .heading-2 {
                     span {
                         color: $color-primary;
+                    }
+                    @include respond(tablet) {
+                        margin-bottom: 3.2rem;
                     }
                 }
 
@@ -216,9 +306,10 @@ main {
         }
 
         &-right {
-            background-image: url(/assets/shared/desktop/image-best-gear.jpg);
-            background-size: cover;
-            background-position: top;
+            grid-area: b;
+            img {
+                width: 100%;
+            }
         }
     }
 }

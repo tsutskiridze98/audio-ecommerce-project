@@ -10,11 +10,15 @@ html {
     font-size: 62.5%; 
 
     @include respond(tablet) {
-        font-size: 58%;
+        font-size: 60%;
     }
 
     @include respond(phone) {
-        font-size: 50%;
+        font-size: 55%;
+    }
+
+    @include respond(small-phone) {
+        font-size: 48%;
     }
 }
 
