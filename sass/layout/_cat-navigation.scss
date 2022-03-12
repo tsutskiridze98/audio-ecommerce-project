@@ -1,0 +1,44 @@
+
+.category-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 6.8rem;
+    }
+
+    &-item {
+        width: 100%;
+        height: 20rem;
+        background-color: $color-secondary-light3;
+        border-radius: 5px;
+        position: relative;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-space {
+            height: 60%;
+        }
+
+        &-img {
+            width: 15rem;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, 10%);
+
+            img {
+                width: 100%;
+            }
+        }
+
+        h6 {
+            text-align: center;
+        }
+    }  
+}
