@@ -9,3 +9,15 @@
         opacity: 1;
     }
 }
+
+@keyframes cart-animation {
+    from {
+        transform: scale(.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,171 @@
+.cart {
+    position: absolute;
+    top: 14rem;
+    right: 0;
+    width: 37.7rem;
+    height: auto;
+    padding: 3.2rem;
+    background-color: $color-white;
+    border-radius: 1rem;
+    animation: cart-animation .2s;
+    z-index: 200;
+
+    display: none;
+    flex-direction: column;
+    row-gap: 3.2rem;
+
+    @include respond(phone) {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    @include respond(small-phone) {
+        max-width: 37.7rem;
+        width: auto;
+    }
+
+    &-amount, &-checkout-total {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+
+    &-items, &-checkout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.4rem;
+    }
+
+    &-items {
+        list-style: none;
+
+        &-item {
+            width: 100%;
+            height: 6.4rem;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-left {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                column-gap: 1.6rem;
+
+                .cart-img-div {
+                    width: 6.4rem;
+
+                    img {
+                        width: 100%;
+                        border-radius: .5rem;
+                    }
+                }
+
+                .cart-product-information {
+
+                    p {
+                        font-weight: 700;
+
+                        &:nth-child(1) {
+                            color: $color-black;
+                        }
+
+                        &:nth-child(2) {
+                            font-size: 1.4rem;
+                            color: rgba($color-black, .5);
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                display: flex;
+                align-items: center;
+
+                .add-cart {
+                    display: inline-flex;
+                    column-gap: 1.2rem;
+                    border-radius: .5rem;
+                    &-number {
+                        height: 3.2rem;
+    
+                        display: inline-flex;
+                        background-color: $color-secondary-light3;
+    
+                        button, p {
+                            height: 100%;
+                            width: 4rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+    
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 1.8rem;
+                            font-weight: 700;
+                            transition: all .3s;
+                        }
+    
+                        button {
+                            text-decoration: none;
+                            border: none;
+                            cursor: pointer;
+    
+                            &:hover {
+                                color: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-amount {
+        a {
+            text-decoration: underline;
+            font-weight: 500;
+            color: rgba($color-black, .5);
+            transition: .3s;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &-checkout {
+
+        &-total {
+
+            p {
+                text-transform: uppercase;
+            }
+
+            h6 {
+                &::before {
+                    content: "$ ";
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    
+}
+
+.display-cart {
+    display: flex;
+}
+
+.cart-container {
+    position: relative;
+}

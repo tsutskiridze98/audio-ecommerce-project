@@ -31,6 +31,14 @@ body {
     top: 9.6rem;
     opacity: 1; } }
 
+@keyframes cart-animation {
+  from {
+    transform: scale(0.9);
+    opacity: 0; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
 .heading-1 {
   font-size: 5.6rem;
   line-height: 5.8rem;
@@ -95,6 +103,9 @@ body {
   padding-left: 4rem;
   padding-right: 4rem; }
 
+.side-margin {
+  margin: 0 4rem 0 4rem; }
+
 .for-blur {
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
@@ -105,6 +116,9 @@ body {
 
 .display-block {
   display: block; }
+
+.overflow {
+  overflow: hidden; }
 
 /* ----------- BUTTON ---------- */
 .btn:link, .btn:visited {
@@ -153,6 +167,112 @@ body {
   .btn-transparent:hover {
     background-color: #000;
     color: #fff; }
+
+.cart {
+  position: absolute;
+  top: 14rem;
+  right: 0;
+  width: 37.7rem;
+  height: auto;
+  padding: 3.2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  animation: cart-animation .2s;
+  z-index: 200;
+  display: none;
+  flex-direction: column;
+  row-gap: 3.2rem; }
+  @media (max-width: 37.5em) {
+    .cart {
+      right: 50%;
+      transform: translateX(50%); } }
+  @media (max-width: 23em) {
+    .cart {
+      max-width: 37.7rem;
+      width: auto; } }
+  .cart-amount, .cart-checkout-total {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .cart-items, .cart-checkout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem; }
+  .cart-items {
+    list-style: none; }
+    .cart-items-item {
+      width: 100%;
+      height: 6.4rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .cart-items-item-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1.6rem; }
+        .cart-items-item-left .cart-img-div {
+          width: 6.4rem; }
+          .cart-items-item-left .cart-img-div img {
+            width: 100%;
+            border-radius: .5rem; }
+        .cart-items-item-left .cart-product-information p {
+          font-weight: 700; }
+          .cart-items-item-left .cart-product-information p:nth-child(1) {
+            color: #000; }
+          .cart-items-item-left .cart-product-information p:nth-child(2) {
+            font-size: 1.4rem;
+            color: rgba(0, 0, 0, 0.5); }
+      .cart-items-item-right {
+        display: flex;
+        align-items: center; }
+        .cart-items-item-right .add-cart {
+          display: inline-flex;
+          column-gap: 1.2rem;
+          border-radius: .5rem; }
+          .cart-items-item-right .add-cart-number {
+            height: 3.2rem;
+            display: inline-flex;
+            background-color: #F1F1F1; }
+            .cart-items-item-right .add-cart-number button, .cart-items-item-right .add-cart-number p {
+              height: 100%;
+              width: 4rem;
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+            .cart-items-item-right .add-cart-number p {
+              font-size: 1.3rem;
+              line-height: 1.8rem;
+              font-weight: 700;
+              transition: all .3s; }
+            .cart-items-item-right .add-cart-number button {
+              text-decoration: none;
+              border: none;
+              cursor: pointer; }
+              .cart-items-item-right .add-cart-number button:hover {
+                color: #D87D4A; }
+  .cart-amount a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    transition: .3s; }
+    .cart-amount a:hover {
+      color: #D87D4A; }
+  .cart-checkout-total p {
+    text-transform: uppercase; }
+  .cart-checkout-total h6::before {
+    content: "$ "; }
+  .cart-checkout .btn {
+    width: 100%;
+    text-align: center; }
+
+.display-cart {
+  display: flex; }
+
+.cart-container {
+  position: relative; }
 
 .category-nav {
   width: 100%;
@@ -409,6 +529,8 @@ body {
       @media (max-width: 62.5em) {
         .header-nav-links {
           display: none; } }
+    .header-nav-cart {
+      cursor: pointer; }
   .header .burger-nav {
     position: absolute;
     z-index: 100;

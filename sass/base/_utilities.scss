@@ -9,6 +9,10 @@
     padding-right: 4rem;
 }
 
+.side-margin {
+    margin: 0 4rem 0 4rem;
+}
+
 .for-blur {
     display: none;
     background-color: rgba($color-black, .4);
@@ -20,4 +24,8 @@
 
 .display-block {
     display: block;
+}
+
+.overflow {
+    overflow: hidden;
 }
