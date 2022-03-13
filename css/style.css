@@ -120,6 +120,9 @@ body {
 .overflow {
   overflow: hidden; }
 
+.main-color {
+  background-color: #fafafa; }
+
 /* ----------- BUTTON ---------- */
 .btn:link, .btn:visited {
   font-size: 1.3rem;
@@ -369,6 +372,87 @@ body {
     @media (max-width: 37.5em) {
       .category .cat-2 {
         row-gap: 3.2rem; } }
+
+.checkout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  @media (max-width: 62.5em) {
+    .checkout {
+      flex-direction: column; } }
+  .checkout-information {
+    width: 65%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 4.8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem; }
+    @media (max-width: 62.5em) {
+      .checkout-information {
+        width: 100%; } }
+    .checkout-information .heading-div {
+      padding-top: 1rem; }
+    .checkout-information-form {
+      width: 100%; }
+      .checkout-information-form .paragraph-div {
+        padding-bottom: 1.6rem; }
+        .checkout-information-form .paragraph-div p {
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #D87D4A;
+          letter-spacing: .9px;
+          text-transform: uppercase; }
+      .checkout-information-form-inputs {
+        width: 100%;
+        display: grid;
+        grid-column-gap: 1.6rem;
+        grid-row-gap: 2.4rem; }
+        .checkout-information-form-inputs .input-div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          row-gap: .9rem; }
+          .checkout-information-form-inputs .input-div label {
+            font-size: 1.2rem;
+            font-weight: 700; }
+          .checkout-information-form-inputs .input-div input {
+            height: 5.6rem;
+            padding-left: 2.4rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.2); }
+            .checkout-information-form-inputs .input-div input:focus {
+              outline: 2px solid #D87D4A;
+              border: none; }
+            .checkout-information-form-inputs .input-div input:focus:invalid {
+              outline: 1px solid red; }
+      .checkout-information-form .grid1 {
+        grid-template-columns: 1fr 1fr; }
+        @media (max-width: 37.5em) {
+          .checkout-information-form .grid1 {
+            grid-template-columns: 1fr; } }
+      .checkout-information-form .grid2 {
+        grid-template-areas: "a a" "b c" "d ."; }
+        @media (max-width: 37.5em) {
+          .checkout-information-form .grid2 {
+            grid-template-areas: "a" "b" "c" "d"; } }
+        .checkout-information-form .grid2-a {
+          grid-area: a; }
+        .checkout-information-form .grid2-b {
+          grid-area: b; }
+        .checkout-information-form .grid2-c {
+          grid-area: c; }
+        .checkout-information-form .grid2-d {
+          grid-area: d; }
+  .checkout-summary {
+    width: 31%;
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 1rem; }
+    @media (max-width: 62.5em) {
+      .checkout-summary {
+        width: 100%; } }
 
 .footer {
   padding-bottom: 5rem;
