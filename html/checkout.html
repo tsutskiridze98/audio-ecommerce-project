@@ -121,7 +121,7 @@
 
         <main class="side-padding main-color">
             <div class="width-center">
-                <div class="goback-div">
+                <div class="checkout-goback-div">
                     <a class="paragraph" href="/html/speakers.html">Go Back</a>
                 </div>
 
@@ -185,23 +185,39 @@
 
                         <div class="checkout-information-form">
                             <div class="paragraph-div">
-                                <p class="paragraph">Billing Details</p>
+                                <p class="paragraph">payment details</p>
                             </div>
-                            <div class="checkout-information-form-inputs">
+                            <div class="checkout-information-form-inputs grid1">
 
                                 <div class="input-div">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" placeholder="Alexei Ward">
+                                    <p>Payment Method</p>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-div-radio-group">
+                                        <input type="radio" id="emoney" name="size" checked>
+                                        <label for="emoney">
+                                            <span class="radio-button"></span>
+                                            e-Money
+                                        </label>
+                                    </div>
+
+                                    <div class="input-div-radio-group">
+                                        <input type="radio" id="cash" name="size">
+                                        <label for="cash">
+                                            <span class="radio-button"></span>
+                                            Cash on Delivery
+                                        </label>
+                                    </div>
                                 </div>
 
                                 <div class="input-div">
-                                    <label for="mail">Email Address</label>
-                                    <input type="mail" id="mail" placeholder="alexei@mail.com">
+                                    <label for="e-number">e-Money Number</label>
+                                    <input type="text" id="e-number" placeholder="238521993">
                                 </div>
 
-                                <div class="input-div">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="text" id="phone" placeholder="+1 202-555-0136">
+                                <div class="input-div grid3-c">
+                                    <label for="e-pin">e-Money PIN</label>
+                                    <input type="text" id="e-pin" placeholder="6891">
                                 </div>
 
                             </div>
@@ -209,7 +225,58 @@
                     </div>
 
                     <div class="checkout-summary">
-
+                        <div class="checkout-summary-heading">
+                            <h6 class="heading-6">Summary</h6>
+                        </div>
+                        <ul class="checkout-summary-items">
+                            <li class="checkout-summary-items-item">
+                                <div class="checkout-summary-items-item-left">
+                                    <div class="checkout-img-div">
+                                        <img src="/assets/cart/image-xx99-mark-two-headphones.jpg" alt="Mark II">
+                                    </div>
+                                    <div class="checkout-product-information">
+                                        <p class="paragraph">XX99 MK II</p>
+                                        <p class="paragraph"> 2,999</p>
+                                    </div>
+                                </div>
+                                <div class="checkout-summary-items-item-right">
+                                    <p class="paragraph">x1</p>
+                                </div>
+                            </li>
+                            <li class="checkout-summary-items-item">
+                                <div class="checkout-summary-items-item-left">
+                                    <div class="checkout-img-div">
+                                        <img src="/assets/cart/image-xx99-mark-two-headphones.jpg" alt="Mark II">
+                                    </div>
+                                    <div class="checkout-product-information">
+                                        <p class="paragraph">XX99 MK II</p>
+                                        <p class="paragraph"> 2,999</p>
+                                    </div>
+                                </div>
+                                <div class="checkout-summary-items-item-right">
+                                    <p class="paragraph">x1</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="checkout-pay">
+                            <div class="checkout-pay-amount">
+                                <p class="paragraph">Total</p>
+                                <h6 class="heading-6">5,396</h6>
+                            </div>
+                            <div class="checkout-pay-amount">
+                                <p class="paragraph">Shipping</p>
+                                <h6 class="heading-6">50</h6>
+                            </div>
+                            <div class="checkout-pay-amount">
+                                <p class="paragraph">Vat (included)</p>
+                                <h6 class="heading-6">539.4</h6>
+                            </div>
+                            <div class="checkout-pay-amount checkout-pay-amount-total">
+                                <p class="paragraph">Grand total</p>
+                                <h6 class="heading-6">3,286.4</h6>
+                            </div>
+                            <a href="/html/checkout.html" class="btn btn-orange">Continue & pay</a>
+                        </div>
                     </div>
                 </div>
             </div>

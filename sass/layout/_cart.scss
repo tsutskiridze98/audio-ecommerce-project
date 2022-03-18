@@ -76,6 +76,10 @@
                         &:nth-child(2) {
                             font-size: 1.4rem;
                             color: rgba($color-black, .5);
+
+                            &::before {
+                                content: "$ ";
+                            }
                         }
                     }
                 }
