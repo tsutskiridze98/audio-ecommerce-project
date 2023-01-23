@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/tsutskiridze98/audio-ecommerce-project#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.3"
   }
 }

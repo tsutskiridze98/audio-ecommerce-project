@@ -199,15 +199,15 @@
 
 .header-home {
     height: 73rem;
-    background-image: url(../assets/home/desktop/image-hero.jpg);
+    background-image: url(/assets/home/desktop/image-hero.jpg);
     background-size: cover;
     background-position: center;
 
     @include respond(tablet) {
-        background-image: url(../assets/home/tablet/image-header.jpg);
+        background-image: url(/assets/home/tablet/image-header.jpg);
     }
 
     @include respond(phone) {
-        background-image: url(../assets/home/mobile/image-header.jpg);
+        background-image: url(/assets/home/mobile/image-header.jpg);
     }
 }
