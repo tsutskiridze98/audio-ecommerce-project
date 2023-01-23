@@ -19,7 +19,7 @@
         margin: 0 auto;
 
         &::after {
-            content: url(/assets/shared/desktop/icon-arrow-right.svg);
+            content: url(../assets/shared/desktop/icon-arrow-right.svg);
             position: absolute;
             left: 5rem;
         }
